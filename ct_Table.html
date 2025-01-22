@@ -2,16 +2,21 @@
 <html>
 <head>
 	<style> /* This is called embedded CSS */
-     table,th,td 
-         {
-      		 border: 1px solid black;
-             border-collapse: collapse;
-             
-         }
-     td
-         {
-        	 padding: 10px;
-         }
+    th
+        {
+            background: lightgrey;
+        }
+    table,th,td 
+        {
+      		border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+        }
+    tfoot
+        {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -26,23 +31,29 @@
 		<th>Calories</th>
 		<th>Fat</th>
       </tr>
-      </thead>
       
-      <thead>
       <tr>
       	<td>Corn soup</td>
 		<td>120</td>
-		<td>2</td>
+		<td rowspan="2">2</td>
       </tr>
-      </thead>
-      
-      <thead>
+
       <tr>
       	<td>Tomato Soup</td>
 		<td>400</td>
-		<td>26</td>
       </tr>
-      </thead>
+
+      <tr>
+        <td>Maggie</td>
+        <td colspan="2">400 (cal.)</td>
+      </tr>
+    </thead>
+  
+    <tfoot>
+      <tr>
+        <td colspan="3"> This is a Footer</td>
+      </tr>
+    </tfoot>
       
       
 	</table>

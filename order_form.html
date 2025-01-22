@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            form fieldset
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                max-width: 380px;
+            }
+            form fieldset input 
+            {
+                float: right;
+                margin: 5px;
+                margin-right: 5%;
+            }
+            button
+            {
+                margin: 20px;
+                max-width: 100px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Black Goose Bistro | Pizza On-Demand</h1>
+        <p>
+            Our 12" Wood-Fired-Pizza are available for delivery.
+            Build your own custom pizza and we will deliver it with in an hour.
+        </p>
+
+        <h4> Your Information:</h4>
+
+        <Form action="action_page.php">
+        <fieldset>
+            <legend>Your Information</legend>
+            <br>
+            
+        <label For="Name">Name:
+            <input type="text" name="name"/>
+        </label>
+            
+        <br />
+        <br />
+
+        <label For="Address">Address:
+            <input type="text" name="Address"/>
+        </label>
+            
+        <br />
+        <br />
+            <label For="Telephone">Telephone:
+                <input type="text" name="Telephone"/>
+            </label>
+
+            <br/>
+            <br />
+
+        <label For="Email">Email:
+            <input type="text" name="Email"/>
+        </label>
+        </fieldset>
+            <br />
+        <fieldset>
+        <legend>delivery Instructions</legend>
+        <p>Limit character length. Max Limit of 400 Characters</p>
+        <textarea rows="5" cols="40"></textarea>
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend>Design Your Own Dream Pizza</legend>
+            <h4>Pizza Specification</h4>
+
+            <h5>Crust (Choose one)</h5>
+            <ul style="display:flex;flex-direction: column;">
+                <li> Classic white <input Type="radio" checked></li>
+                <li> Multigrain <input Type="radio"></li>
+                <li> Cheese stuffed <input Type="radio"></li>
+                <li> Gluten Free<input Type="radio"></li>
+            </ul>
+        </fieldset>
+
+
+        </Form>
+    </body>
+</html>
