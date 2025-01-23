@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- It is called embedded Styling-->
         <style>
+             fieldset
+            {
+                background-color: lightblue;
+                border-radius: 8px;
+            }
             form fieldset
             {
                 display: flex;
+                margin: 0 auto;
                 flex-direction: column;
                 justify-content: flex-end;
                 max-width: 380px;
@@ -20,22 +27,42 @@
                 margin: 20px;
                 max-width: 100px;
             }
+            #button-container
+            {
+                display: flex;
+                background-color: lightblue;
+                border: 1px solid black;
+                border-radius: 8px;
+                flex-direction: row;
+                margin: 8px auto;
+                max-width: 400px;
+            }
         </style>
     </head>
 
     <body>
+
+        <script>
+            const Toppings = document.querySelectorAll(".toppings");
+
+            Toppings.forfatch((topping)=> {
+                topping.checked = false;
+            });
+        </script>
+        <center>
         <h1>Black Goose Bistro | Pizza On-Demand</h1>
-        <p>
+        <p style="max-width:50%;">
             Our 12" Wood-Fired-Pizza are available for delivery.
             Build your own custom pizza and we will deliver it with in an hour.
         </p>
+        </center>
 
         <h4> Your Information:</h4>
 
-        <Form action="action_page.php">
+        <form action="action_page.php">
         <fieldset>
             <legend>Your Information</legend>
-            <br>
+            <br />
             
         <label For="Name">Name:
             <input type="text" name="name"/>
@@ -69,19 +96,48 @@
         </fieldset>
         <br />
         <fieldset>
-            <legend>Design Your Own Dream Pizza</legend>
+            <legend>Design your own Pizza</legend>
             <h4>Pizza Specification</h4>
 
             <h5>Crust (Choose one)</h5>
             <ul style="display:flex;flex-direction: column;">
-                <li> Classic white <input Type="radio" checked></li>
-                <li> Multigrain <input Type="radio"></li>
-                <li> Cheese stuffed <input Type="radio"></li>
-                <li> Gluten Free<input Type="radio"></li>
+                <li> Classic white <input Type="radio" name="groupname" checked></li>
+                <li> Multigrain <input Type="radio" name="groupname"></li>
+                <li> Cheese stuffed <input Type="radio" name="groupname"></li>
+                <li> Gluten Free<input Type="radio" name="groupname"></li>
             </ul>
         </fieldset>
+        <br/>
+        <fieldset>
+            <legend> Toppings</legend>
+            <h4> Choose as many as you want.</h4>
 
 
-        </Form>
+            <ul style="display:flex;flex-direction: column;">
+                <li> White Sauce<input Type="radio"checked></li>
+                <li> Red sauce <input Type="radio" name="groupname"></li>
+                <li> Mozzarella<input Type="radio" name="groupname"></li>
+                <li> pepperoni <input Type="radio" name="groupname"></li>
+                <li> Mushrooms <input Type="radio" name="groupname"></li>
+                <li> peppers <input Type="radio" name="groupname"></li>
+                <li> Anchovies <input Type="radio" name="groupname"></li>
+            </ul>
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend> Additional Info </legend>
+                <label for="number">Number of Pizzas:
+                    <input type="number" name="number" max="10" />
+                </label>
+        </fieldset>
+        
+        <div id="button-container">
+            <button>Submit</button>
+            <button>Subscribe</button>
+            <button>Reset</button>
+        </div>
+
+
+        </form>
     </body>
 </html>
